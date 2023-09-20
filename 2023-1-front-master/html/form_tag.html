@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>로그인, 회원가입</h1>
+    
+    <form action="/api/login" method="get">
+        <div><label>이름: <input type="text" name="name" value="홍길동"></label></div>
+        <div>
+            
+            <div><label for="input-age">나이</label></div>
+            <div><input type="number" name="age" id="input-age" placeholder="나이"></div>            
+        </div>        
+        <div>키: <input type="range" name="height"></div>
+        <div>
+            취미: 
+            <label>농구<input type="checkbox" value="1" name="hobby" checked></label>
+            <label>축구<input type="checkbox" value="2" name="hobby"></label>
+            <label>배구<input type="checkbox" value="3" name="hobby"></label>
+        </div>
+        <div>
+            성별:
+            <label><input type="radio" name="gender" value="0" checked>여자</label>
+            <label><input type="radio" name="gender" value="1">남자</label>
+            <label><input type="radio" name="gender" value="2">외계인</label>
+        </div>
+        <div>
+            지역:
+            <select name="region">
+                <option>-- 선택 --</option>
+                <option value="1">서울</option>
+                <option value="2">대전</option>
+                <option value="3" selected>대구</option>
+                <option value="4">부산</option>
+            </select>
+        </div>
+        <div>
+            남길말 : <textarea name="cmt" placeholder="남긴말">dddfdfdf</textarea>
+        </div>
+        <div><input type="submit" value="전송"></div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,10 @@
+#container { 
+    display: flex; flex-direction:row; 
+    width:500px; height: 700px; background-color:#FF7F50; 
+    justify-content: space-between;
+    align-items: center;
+}
+#container div { background-color: #fff; height: 100px; width:100px; }
+#container div:first-child { color: aquamarine; }
+#container div:nth-child(2) { color: aqua !important; }
+div { color: red; border: 1px solid #ccc; }

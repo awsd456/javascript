@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="container">
+        <input type="number" id="n1" value="">
+        <input type="number" id="n2" value="">
+        <button id="btn_plus">더하기</button>       
+    </div>
+    <div id="result"></div>
+</body>
+<script>
+    const $n1 = document.getElementById('n1');
+    const $n2 = document.querySelector('#n2');
+    const $btnPlus = document.querySelector('#btn_plus');
+    const $divResult = document.querySelector('#result');
+
+    $btnPlus.addEventListener('click', function() {
+       
+        const n1Val = parseInt($n1.value);
+        const n2Val = parseInt($n2.value);
+
+        console.log('n1Val:', n1Val);
+        console.log('n2Val:', n2Val);
+        
+        const result = n1Val + n2Val;
+        console.log('result:', result);
+
+        //$divResult.innerHTML = `<b>${result}</b>`;
+        //$divResult.innerText = `<b>${result}</b>`;
+
+        const div = document.createElement('div');
+        div.addEventListener('click', function(e) {
+            const ths = e.target;
+            alert(`나는 값이 ${ths.innerText}입니다.`);
+        });
+        div.innerText = result;
+        //$divResult.appendChild(div);        
+        $divResult.prepend(div);
+    });
+
+    console.log($n1.value);
+    console.log($n2);
+</script>
+</html>

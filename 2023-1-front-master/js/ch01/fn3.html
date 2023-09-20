@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function sum() {
+        var r = 0;
+        for(var i=0; i<arguments.length; i++) {
+            r += arguments[i];
+        }
+        console.log(r);
+    }
+    sum(5, 2); //7
+    sum(5, 2, 3); //10
+    sum(5, 2, 3, 4); //14
+    sum(5, 2, 3, 4, 5); //19
+
+</script>
+</html>

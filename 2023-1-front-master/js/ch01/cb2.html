@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function calc(fn, num1, num2) {
+        return fn(num1, num2);
+    }
+    const result = calc(function(n1, n2) {
+        return n1 + n2
+    }, 100, 200);
+    console.log('result:', result);
+
+    const result2 = calc(function(n1, n2) {
+        return n1 - n2;
+    }, 200, 20);
+    console.log('result2:', result2);
+</script>
+</html>

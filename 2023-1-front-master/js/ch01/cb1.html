@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function fnSum(n1, n2) {
+        return n1 + n2;
+    }
+
+    function fnMinus(n1, n2) {
+        return n1 - n2;
+    }
+
+    const f1 = fnSum;
+    console.log(f1(10, 30));
+    console.log(fnSum(10, 30));
+
+    function calc(fn, num1, num2) {
+        return fn(num1, num2);
+    }
+    const result2 = calc(fnMinus, 100, 20);
+    console.log('result2:', result2);
+
+    const result1 = calc(fnSum, 20, 50);
+    console.log('result1:', result1);
+
+    const fn = fnSum;
+    const rr = fn(20, 50);
+    console.log('rr:', rr);
+</script>
+</html>
